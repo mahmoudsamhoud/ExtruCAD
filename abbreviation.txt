@@ -1,0 +1,107 @@
+GUI
+===
+input date 
+==========
+x= get(handles.tage,'string');
+x= str2num(x);
+
+or x = str2num(get(handles.tag,'string))
+--------------------------------------
+output date
+===========
+ans = num2str(xx);
+set(handles.tag,'string',ans);
+
+or set(handles.tag,'string',num2str(ans))
+--------------------------------------
+plotting
+=========
+axes(handles.tag);
+plot(t,y)
+--------------------------------------
+List box
+=========
+h=get(handles.listbox1,'value');
+switch h
+    case 1
+        action
+    case 2
+        action
+    case 3    
+        action
+    case 4
+        action      
+end
+--------------------------------------
+popup menu
+==========
+val=get(handles.menu,'value');
+str=get(handles.menu,'string');
+switch str{val};
+    case 'sum'
+        x=n1+n2;
+        xs=num2str(x);
+    case 'sub'
+        x=n1-n2;
+        xs=num2str(x);
+    case 'dot'    
+        x=n1*n2;
+        xs=num2str(x);
+    case 'div'
+        x=n1/n2;
+        xs=num2str(x);       
+end
+============================================
+enable for pushbutton or radio and any thing
+set(handles.tag,'enable','on')
+============================================
+radio button 
+============
+if (get(handles.tag,'value'))==1
+  action
+end
+----------------------------------------
+check box
+============
+if (get(handles.tag,'value'))==1
+  action
+end
+---------------------------------------
+Table
+=====
+x = get(handles.uitable,'data');
+y = operation
+set(handles.uitable,'data',y);
+---------------------------------------
+slider
+=======
+s=get(handles.slider,'value');
+---------------------------------------
+toggle button
+=============
+a = get(handles.tag,'value');
+if a == 1 
+action
+else
+action
+end
+---------------------------------------
+clear pushbutton for edit box
+=============================
+    s=0;
+    sx=num2str(s);
+    set(handles.num1,'string',sx)
+    set(handles.num2,'string',sx)
+--------------------------------------------------
+Clear pushbutton for axes and grid off and enables
+==================================================
+set(handles.tag,'enable','off')
+clear
+clc
+cla
+grid off
+---------------------------------------- 
+Exit pushbutton
+===============
+close
+---------------------------------------
